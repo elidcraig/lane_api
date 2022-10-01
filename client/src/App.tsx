@@ -1,11 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { useState } from 'react'
+import Header from './components/Header'
 
 function App() {
 
   return (
-    <div>
-      TEST TEST
+    <div className='app'>
+      <Header />
+      {/* Outlet component renders nested routes as children */}
+      <Outlet />
     </div>
   )
 }
