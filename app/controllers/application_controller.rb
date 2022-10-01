@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
 
-  skip_before_action :verify_authenticity_token
-
   wrap_parameters false
 
   rescue_from ActiveRecord::RecordNotFound, with: :handle_not_found

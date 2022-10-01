@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :reservations
-  resources :vehicles
-  # resources :users
+  resources :vehicles, only: :index
+  resources :reservations, except: :index
   
   post '/signup', to: 'users#create'
   get '/me', to: 'users#show'
